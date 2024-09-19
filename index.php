@@ -9,14 +9,9 @@ use Carlos\Scheduler\Routers\Loader;
 
 // $user = new Users();
 
-// $data = [
-//     'name' => "",
-//     'email' => "carlo@example.com",
-//     'phone' => "35998309568",
-//     'password' => password_hash('12236565', PASSWORD_DEFAULT),
-// ];
+// $data = $user->findAll();
 
-// $user->create($data);
+// var_dump($data);
 
 $loader = new Loader();
 $loader->execute();

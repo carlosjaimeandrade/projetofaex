@@ -23,17 +23,32 @@ class RegisterPost
 
     public function execute($data)
     {
+
         if (!$this->validate->execute($data)){
+            $this->message->setMessageError("Verique os campos e tente novamente");
+            header('location: /register');
+            return;
+        }
+
+        $data = $this->users->findOne([
+            "email" => $data['email']
+        ]);
+
+        if ($data) {
+            $this->message->setMessageError("Já existe um usuário com esse email");
             header('location: /register');
             return;
         }
 
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
-        $this->users->create($data);
+        if ($this->users->create($data) == false) {
+            $this->message->setMessageError("Ocorreu um erro ao registrar, tente novamente");
+            header('location: /register');
+            return;
+        };
 
         $this->message->setMessageSuccess("Registrado com sucesso");
-        $this->message->setMessageError(message: "asopdkaopkdopsa");
        
         header('location: /login');
         return;
