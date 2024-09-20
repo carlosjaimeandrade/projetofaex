@@ -30,11 +30,11 @@ class RegisterPost
             return;
         }
 
-        $data = $this->users->findOne([
+        $dataUser = $this->users->findOne([
             "email" => $data['email']
         ]);
 
-        if ($data) {
+        if ($dataUser) {
             $this->message->setMessageError("Já existe um usuário com esse email");
             header('location: /register');
             return;
