@@ -3,6 +3,7 @@ namespace Carlos\Scheduler\Controllers\User;
 
 use Carlos\Scheduler\Helpers\Message\Message;
 use Carlos\Scheduler\Models\Users\Users;
+use Carlos\Scheduler\Models\Users\UserSession;
 
 class LoginPost
 {
@@ -10,10 +11,13 @@ class LoginPost
 
     protected Users $users;
 
+    protected UserSession $userSession;
+
     public function __construct()
     {
         $this->users = new Users();
         $this->message = new Message();
+        $this->userSession = new UserSession();
     }
     public function execute($data)
     {
@@ -49,6 +53,8 @@ class LoginPost
             header('location: /login');
             return;
         }
+        
+        $this->userSession->create($user->id, $user->name, $user->email);
 
         header('location: /panel/scheduler/');
     }
