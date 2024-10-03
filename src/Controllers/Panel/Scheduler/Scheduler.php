@@ -5,13 +5,15 @@ use Carlos\Scheduler\Helpers\Template\Loader;
 
 class Scheduler
 {
+    protected Loader $template;
+
     public function __construct() {
         $this->template = new Loader();
     }
 
     public function execute()
     {   
-        echo "Listagem de agendamentos";
+        $this->template->render('panel/scheduler', true);
     }
 
 }
