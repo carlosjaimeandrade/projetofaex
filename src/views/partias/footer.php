@@ -1,9 +1,6 @@
-    <footer class="footer-container">
-        <div class="footer-content">
-            <span>
-                Desenvolvido por carlos
-            </span>
-        </div>
-    </footer>
+<footer class="container-footer">
+    Desenvolvidor por Carlos Jaime
+</footer>
 </body>
+
 </html>
