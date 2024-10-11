@@ -1,10 +1,11 @@
-<?php if($_messages) {?>
-        <div class="container-message">
-            <?php foreach($_messages as $message) {?>
-                <div class="content-message <?= $message["type"]?>-message">
-                    <?= $message["message"] ?>
+<?php if ($_messages){ ?>
+        <div class="container-message">  
+            <?php foreach ($_messages as $message ){ ?>
+                <div class=" type-<?= $message['type']?>">
+                    <span><?= $message['message']?></span>
                 </div>
             <?php } ?>
         </div>
-<?php }?>
+<?php } ?>
+
 <script src="/public/js/message.js"></script>

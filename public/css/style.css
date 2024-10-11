@@ -39,7 +39,7 @@
     margin-top: 10px;
 }
 
-.type-error {
+.type-danger {
     background-color: rgba(250, 35, 35, 0.671);
     padding: 5px 10px;
     border-radius: 8px;
@@ -51,7 +51,7 @@
     color: #fff;
 }
 
-.type-error span {
+.type-danger span {
     text-align: center;
     color: #fff;
 }
