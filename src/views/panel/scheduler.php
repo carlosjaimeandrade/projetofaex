@@ -13,81 +13,31 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Data de agendamento</th>
+                    <th scope="col">Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Ações
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/panel/scheduler/edit"><i class="fa-solid fa-pen-to-square"></i> Editar</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Ações
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/panel/scheduler/edit"><i class="fa-solid fa-pen-to-square"></i> Editar</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Ações
-                            </button>
-                            <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="/panel/scheduler/edit"><i class="fa-solid fa-pen-to-square"></i> Editar</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Ações
-                            </button>
-                            <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="/panel/scheduler/edit"><i class="fa-solid fa-pen-to-square"></i> Editar</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                
+                <?php foreach ($schedulers as $key => $scheduler): ?>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><?= $scheduler['name_scheduler'] ?></td>
+                        <td><?= $scheduler['date_scheduler'] ?></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Ações
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/panel/scheduler/edit"><i class="fa-solid fa-pen-to-square"></i> Editar</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>    
+                <?php endforeach;?>           
             </tbody>
         </table>
     </div>

@@ -9,16 +9,16 @@
                 <li class="breadcrumb-item active" aria-current="page">Agendamento</li>
             </ol>
         </nav>
-        <form method="post">
+        <form method="post" action="/panel/scheduler/create/save">
             <div class="row mt-5">
                 <div class="form-group col-md-6">
                     <label>Nome</label>
-                    <input type="name" required name="name" class="form-control"
+                    <input type="name" required name="name_scheduler" class="form-control"
                         placeholder="Nome da agenda">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Data</label>
-                    <input type="datetime-local" required name="date" class="form-control">
+                    <input type="datetime-local" required name="date_scheduler" class="form-control">
                 </div> 
             </div>
             <div class="row mt-3">
@@ -32,7 +32,15 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
+                    <label>Status</label>
+                    <select class="form-control" name="status" id="">
+                        <option value="">Selecione</option>
+                        <option value="0">Agendado</option>
+                        <option value="1">Concluido</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
                     <label>Observações</label>
                     <textarea class="form-control" name="obs" id=""></textarea>
                 </div>

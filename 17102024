@@ -1,0 +1,11 @@
+-> Verificar se a tabela que ira armazenar os dados esta criada
+-> Modificar a abstractModel
+-> Garantir que a view de "cadastrar um agendamento" está com os atributo name setado no input conforme as coluna do banco de dados
+-> Criar uma nova rota que irá receber a submição do forumulario
+-> Criar um controller que ira receber a submição do forumulario
+-> No formulario devemos apontar para a rota que sera submetida
+-> Criar uma model da nossa tabela
+-> Chamar a model dentro do createPost e chamar a função create para salvar os dados no banco de dados
+-> Na rota de listagem de dados, localize o controler e chame a model que representa a sua entidade de dados de "agendamento"
+-> No controller de listagem realize uma busca usando o findAll e passe essa informação para o frontend
+-> No front end realizar um estrutura de repetição em cada dado retornado
