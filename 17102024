@@ -1,3 +1,5 @@
+Commit 
+https://github.com/carlosjaimeandrade/projetofaex/commit/7ca400739c6ffdaee020ca7f3eee309c2af6c8a5
 -> Verificar se a tabela que ira armazenar os dados esta criada
 -> Modificar a abstractModel
 -> Garantir que a view de "cadastrar um agendamento" está com os atributo name setado no input conforme as coluna do banco de dados
@@ -9,3 +11,6 @@
 -> Na rota de listagem de dados, localize o controler e chame a model que representa a sua entidade de dados de "agendamento"
 -> No controller de listagem realize uma busca usando o findAll e passe essa informação para o frontend
 -> No front end realizar um estrutura de repetição em cada dado retornado
+Commit
+https://github.com/carlosjaimeandrade/projetofaex/commit/dec0a9535d1321c6d3e6b910b7d39dabae39f145
+-> Modificar a class controller loginPost conforme commit acima
