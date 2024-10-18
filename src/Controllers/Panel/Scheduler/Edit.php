@@ -13,7 +13,7 @@ class Edit
 
     public function execute()
     {   
-        $this->template->render('panel/schedulerCreate', true);
+        $this->template->render('panel/schedulerEdit', true);
     }
 
 }
