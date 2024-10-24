@@ -24,7 +24,7 @@ class SchedulerRouters
 
         $this->router->post("/panel/scheduler/create/save", 'CreatePost:execute', middleware: UserSession::class);
         
-        $this->router->get("/panel/scheduler/edit", 'Edit:execute', middleware: UserSession::class);
+        $this->router->get("/panel/scheduler/edit/{id}", 'Edit:execute', middleware: UserSession::class);
 
         $this->router->get("/panel/scheduler/logout", 'Logout:execute', middleware: UserSession::class);
     }

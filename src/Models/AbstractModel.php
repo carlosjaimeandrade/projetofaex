@@ -72,7 +72,7 @@ abstract class AbstractModel
         $table = $this->table;
         $sql = "SELECT $column FROM $table WHERE " .$where;
         $stmt = $this->connect->prepare($sql);
-        if ($condition != "1") {
+        if (count($condition) > 0)  {
             $stmt->execute($condition);
         } else {
             $stmt->execute();
@@ -81,13 +81,26 @@ abstract class AbstractModel
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+    //UPDATE TABLE SET name = :name, idade = :idade WHERE id = :id
     public function update()
     {
 
     }
 
-    public function delete()
+    //DELETE FROM TABLE WHERE id = :id
+    public function delete($id)
     {
-        
+        $table = $this->table;
+        $sql = "DELETE FROM $table WHERE id = :id";
+        $stmt = $this->connect->prepare($sql);
+        $response = $stmt->execute([
+            'id' => $id
+        ]);
+
+        if ($response) {
+            return true;
+        }
+
+        return false;
     }
 }

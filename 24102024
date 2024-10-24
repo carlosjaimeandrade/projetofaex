@@ -1,0 +1,6 @@
+-> Ajustar erro na função findAll na abstractModel linha 75
+-> Alterar parametros na criação de sessão no LoginPost
+-> Criar metodo delete no abstractModel
+-> Ajustar a rota de edição para passar um parametro do id
+-> No controller Edit obter o id do parametro e realizar um find no banco de dados passando os dados para o front
+-> Em view Edit, apresentar os dados retornado do banco de dado em cada input correspondendo ao seu dado
