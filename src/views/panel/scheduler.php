@@ -32,7 +32,11 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/panel/scheduler/edit/<?= $scheduler['id'] ?>"><i class="fa-solid fa-pen-to-square"></i> Editar</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</a></li>
+                                    <li>
+                                        <form action="/panel/scheduler/delete/<?= $scheduler['id'] ?>" method="post">
+                                            <button type="submit" class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i> Deletar</button>
+                                        </form>
+                                    </li>
                                 </ul>
                             </div>
                         </td>
