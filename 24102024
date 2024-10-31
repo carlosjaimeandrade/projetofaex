@@ -4,9 +4,7 @@
 -> Ajustar a rota de edição para passar um parametro do id
 -> No controller Edit obter o id do parametro e realizar um find no banco de dados passando os dados para o front
 -> Em view Edit, apresentar os dados retornado do banco de dado em cada input correspondendo ao seu dado
-
 ________________________________________________________________
-
 
 -> Criar um nova rota para deletar um dado no banco de dados, essa rota deve ter um parametro id
 -> Criar um novo Controller deletar que ira receber a requisição do frontend

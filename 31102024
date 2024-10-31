@@ -1,0 +1,4 @@
+-> Criar função no abstract model
+-> Criar uma nova rota POST para receber a atualização
+-> Enviar a requisição do formulario edit para a nova rota
+-> Criar controller EditPost e chamar a função update

@@ -30,7 +30,6 @@ class Delete
         $this->message->setMessageSuccess('Não foi possivel deletar');
 
         header('Location: /panel/scheduler/');
-
     }
 
 }

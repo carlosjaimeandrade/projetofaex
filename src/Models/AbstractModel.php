@@ -82,9 +82,30 @@ abstract class AbstractModel
     }
 
     //UPDATE TABLE SET name = :name, idade = :idade WHERE id = :id
-    public function update()
+    public function update($data, $id)
     {
+        try {
+            $set = "";
+            foreach($data as $key => $value) {
+                $set .= "$key = :$key,";
+            }
+            
+            $set = rtrim($set, ",");
 
+            $table = $this->table;
+
+            $sql = "UPDATE $table SET $set WHERE id = :id";
+         
+            $stmt = $this->connect->prepare($sql);
+            $data["id"] = $id;
+            if ($stmt->execute(params: $data)) {
+                return true;
+            }
+
+            return false;
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     //DELETE FROM TABLE WHERE id = :id

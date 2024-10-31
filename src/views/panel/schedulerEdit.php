@@ -9,7 +9,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Editar Agendamento</li>
             </ol>
         </nav>
-        <form method="post">
+        <form method="post" action="/panel/scheduler/edit/<?= $scheduler['id'] ?>">
             <div class="row mt-5">
                 <div class="form-group col-md-6">
                     <label>Nome</label>
