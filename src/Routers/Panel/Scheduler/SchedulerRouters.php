@@ -17,7 +17,9 @@ class SchedulerRouters
     public function execute()
     {
         $this->router->namespace('Carlos\Scheduler\Controllers\Panel\Scheduler');
-                                                                                           
+            
+        $this->router->get("/api/schedulers/", 'ApiScheduler:execute');
+
         $this->router->get("/panel/scheduler/", 'Scheduler:execute', middleware: UserSession::class);
 
         $this->router->get("/panel/scheduler/create", 'Create:execute', middleware: UserSession::class);
