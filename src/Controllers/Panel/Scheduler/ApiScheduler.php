@@ -18,7 +18,6 @@ class ApiScheduler
     public function execute()
     {   
         $schedulers = $this->schedulers->findAll();
-
         
         echo json_encode($schedulers);
     }
