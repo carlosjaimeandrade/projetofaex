@@ -1,4 +1,13 @@
 <main>
+    <div class="container-search">
+        <form action="/panel/scheduler/search" method="GET">
+            <input value="<?= $search ?>" name="nameFilter" type="text">
+            <button>Buscar</button>
+        </form>
+        <?php if ($search != "") { ?>
+            <a href="/panel/scheduler">Limpar</a>
+        <?php } ?>
+    </div>
     <div class="container">
         <div class="container-actions">
             <h4 >Agendamentos</h4>

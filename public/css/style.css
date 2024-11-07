@@ -109,3 +109,14 @@
 .logo img{
     height: 40px;
 }
+
+.container-search{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+.container-search button {
+    border: none;
+}

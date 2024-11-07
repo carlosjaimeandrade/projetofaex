@@ -21,6 +21,8 @@ class SchedulerRouters
         $this->router->get("/api/schedulers/", 'ApiScheduler:execute');
 
         $this->router->get("/panel/scheduler/", 'Scheduler:execute', middleware: UserSession::class);
+        
+        $this->router->get("/panel/scheduler/search", 'Scheduler:execute', middleware: UserSession::class);
 
         $this->router->get("/panel/scheduler/create", 'Create:execute', middleware: UserSession::class);
 
