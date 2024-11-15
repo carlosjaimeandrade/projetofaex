@@ -19,7 +19,9 @@ class ApiScheduler
     {   
         $schedulers = $this->schedulers->findAll();
         
-        echo json_encode($schedulers);
+        echo json_encode([
+            "total_schedulers" => count( $schedulers)
+        ]);
     }
 
 }
